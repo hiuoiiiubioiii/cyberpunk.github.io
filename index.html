@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Sum: The 3D Experience</title>
+    
+    <!-- Load Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Google Font: Orbitron for Sci-Fi look -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Scroll Progress -->
+    <div id="progress-bar"></div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- TITLE SECTION -->
+        <section class="visible">
+            <h1>Two Sum Protocol</h1>
+            <p style="color:var(--neon-yellow);">// INITIALIZING GOOGLE INTERVIEW FRAMEWORK...</p>
+            <p>Scroll to navigate the data tunnel.</p>
+        </section>
+
+        <!-- SECTION 1: DICTIONARY -->
+        <section>
+            <h2>01. The Novice Dictionary</h2>
+            <p>Acquiring necessary tools for the mission.</p>
+            <ul>
+                <li><strong>C++:</strong> High-performance language used at Google.</li>
+                <li><strong>STL:</strong> Standard Template Library. Your toolkit.</li>
+                <li><strong>Time Complexity (Big O):</strong> speed of execution. <br> O(n) = Fast. O(n²) = Slow.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 2: LOGIC -->
+        <section>
+            <h2>02. Visual Logic</h2>
+            <p><strong>Mission:</strong> Find two numbers in <code>[2, 7, 11, 15]</code> that add up to <code>9</code>.</p>
+            
+            <div class="diagram-box">
+                [ VISUALIZING HASH MAP ]<br>
+                Target: 9<br>
+                Current: 2 -> Need 7? (Not seen)<br>
+                Current: 7 -> Need 2? (Seen at Index 0!)
+            </div>
+            <p>We use a <strong>Hash Map</strong> as a "Notebook" to remember numbers we have passed.</p>
+        </section>
+
+        <!-- SECTION 3: CODE -->
+        <section>
+            <h2>03. Source Code</h2>
+            <p>Executing optimized C++ solution.</p>
+            <pre><code><span class="keyword">class</span> <span class="type">Solution</span> {
+<span class="keyword">public</span>:
+    <span class="type">vector&lt;int&gt;</span> twoSum(<span class="type">vector&lt;int&gt;</span>& nums, <span class="type">int</span> target) {
+        <span class="type">unordered_map&lt;int, int&gt;</span> notebook;
+        
+        <span class="keyword">for</span> (<span class="type">int</span> i = 0; i < nums.size(); ++i) {
+            <span class="type">int</span> complement = target - nums[i];
+            
+            <span class="keyword">if</span> (notebook.count(complement)) {
+                <span class="keyword">return</span> {notebook[complement], i};
+            }
+            notebook[nums[i]] = i;
+        }
+        <span class="keyword">return</span> {};
+    }
+};</code></pre>
+        </section>
+
+        <!-- SECTION 4: END -->
+        <section>
+            <h2>04. System Halt</h2>
+            <p>Protocol Complete. You are ready for the interview.</p>
+            <p style="text-align: center; margin-top: 20px;">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="reboot-btn">REBOOT SYSTEM</button>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
